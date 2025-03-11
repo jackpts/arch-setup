@@ -1,0 +1,41 @@
+# Main
+paru
+pacseek
+
+# VC
+nvidia
+nvidia-utils
+nvidia-settings
+nvidia-dkms
+
+# libva
+# libva-nvidia-driver-git
+gpu-info
+
+# fonts
+ttf-cascadia-code-nerd
+ttf-maple-beta
+
+# Hyprland
+mission-center
+checkupdates-with-aur
+wlogout
+grim
+hyprshot
+
+# Browsers
+google-chrome
+opera
+opera-ffmpeg-codecs
+opera-adblock-complete
+opera-proxy-git
+zen-browser-bin
+brave-bin
+
+# Video
+gpu-screen-recorder
+yt-x-git
+
+# AI
+open-webui
+speech-dispatcher

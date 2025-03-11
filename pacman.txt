@@ -1,0 +1,117 @@
+# Main
+git
+curl
+inxi
+fastfetch
+jq
+gnome-tweaks
+gnome-system-monitor
+zoxide
+pass
+gnupg
+
+
+# Disks
+parted
+gparted
+partitionmanager
+
+# shells
+fish
+fisher
+zsh
+zsh-completions
+
+# download
+wget
+uget
+deluge-gtk
+
+# Image viewers
+imagemagick
+gthumb
+lximage-qt
+qimgv
+feh
+gimp
+eog
+
+# Sound
+pamixer
+pavucontrol
+pipewire
+wireplumber
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
+playerctl
+mpd
+ncmpcpp
+
+# BT
+bluez
+bluez-utils
+blueman
+
+# fonts
+otf-font-awesome
+ttf-font-awesome
+ttf-fira-sans
+ttf-fira-code
+ttf-firacode-nerd
+ttf-droid
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
+
+# editors
+vim
+neovim
+nano
+micro
+geany
+
+# Hyprland
+kitty
+network-manager-applet
+swaync
+swayimg
+swww
+waybar
+wl-clipboard
+hyprland
+kitty
+wofi
+rofi
+feh
+libnotify
+hyprlock
+hypridle
+qt5-wayland
+qt6-wayland
+noto-fonts
+copyq
+figlet
+gum
+
+# SDDM
+sddm
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
+qt6-5compat
+qt6-declarative
+qt6-svg
+
+# GPU
+cuda
+cudnn
+
+# themes
+arc-gtk-theme
+
+# network
+networkmanager
+networkmanager-dmenu
+
+# AI
+ollama

@@ -1,1 +1,3 @@
-# arch-setup
+# My customized 󰣇 setup
+
+
