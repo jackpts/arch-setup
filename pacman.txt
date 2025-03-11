@@ -54,12 +54,14 @@ bluez-utils
 blueman
 
 # fonts
+fontconfig
+noto-fonts
 otf-font-awesome
-ttf-font-awesome
-ttf-fira-sans
-ttf-fira-code
-ttf-firacode-nerd
 ttf-droid
+ttf-fira-code
+ttf-fira-sans
+ttf-firacode-nerd
+ttf-font-awesome
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 
@@ -88,7 +90,6 @@ hyprlock
 hypridle
 qt5-wayland
 qt6-wayland
-noto-fonts
 copyq
 figlet
 gum
