@@ -2,7 +2,6 @@
 git
 curl
 inxi
-fastfetch
 jq
 gnome-tweaks
 gnome-system-monitor
@@ -10,6 +9,13 @@ zoxide
 pass
 gnupg
 
+
+# Terminals & fetchers
+alacritty
+fastfetch
+kitty
+neofetch
+tmux
 
 # Disks
 parted
@@ -73,26 +79,25 @@ micro
 geany
 
 # Hyprland
-kitty
+copyq
+feh
+figlet
+gum
+hypridle
+hyprland
+hyprlock
+libnotify
 network-manager-applet
-swaync
+obs-studio
+qt5-wayland
+qt6-wayland
+rofi
 swayimg
+swaync
 swww
 waybar
 wl-clipboard
-hyprland
-kitty
 wofi
-rofi
-feh
-libnotify
-hyprlock
-hypridle
-qt5-wayland
-qt6-wayland
-copyq
-figlet
-gum
 
 # SDDM
 sddm

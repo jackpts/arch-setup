@@ -17,25 +17,56 @@ ttf-hack-nerd
 ttf-maple-beta
 
 # Hyprland
-mission-center
+arch-update
+brightnessctl
 checkupdates-with-aur
-wlogout
 grim
+hypridle
+hyprpicker
+hyprpolkitagent
 hyprshot
+hyprsunset
+hyprswitch
+hyprsysteminfo
+hyprwall
+mission-center
+nwg-dock-hyprland
+resources
+scrot
+swww
+walker-bin
+waypaper
+wlogout
+xclip
 
 # Browsers
+#brave-bin
+ddgr
 google-chrome
 opera
-opera-ffmpeg-codecs
 opera-adblock-complete
+opera-ffmpeg-codecs
 opera-proxy-git
 zen-browser-bin
-brave-bin
 
 # Video
 gpu-screen-recorder
+wf-recorder
 yt-x-git
 
 # AI
 open-webui
 speech-dispatcher
+
+# Terminals & fetchers
+ghostty
+onefetch
+rxfetch
+
+# Tools
+lazydocker
+yt-x-git
+
+# Img
+chafa
+
