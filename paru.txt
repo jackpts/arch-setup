@@ -1,5 +1,4 @@
 # Main
-paru
 pacseek
 
 # VC
