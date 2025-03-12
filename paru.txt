@@ -1,5 +1,10 @@
-# Main
+# Main / System
+chaotic-keyring
+chaotic-mirrorlist
 pacseek
+clipman
+cpulimit
+qxkb-qt5
 
 # VC
 nvidia
@@ -10,8 +15,10 @@ nvidia-dkms
 # libva
 # libva-nvidia-driver-git
 gpu-info
+gpu-viewer
+gpustat-git
 
-# fonts
+# Fonts
 ttf-cascadia-code-nerd
 ttf-hack-nerd
 ttf-maple-beta
@@ -32,6 +39,7 @@ hyprwall
 mission-center
 nwg-dock-hyprland
 resources
+rose-pine-hyprcursor
 scrot
 swww
 walker-bin
@@ -59,14 +67,62 @@ open-webui
 speech-dispatcher
 
 # Terminals & fetchers
+bunnyfetch
+capyfetch
+catnap-git
 ghostty
 onefetch
 rxfetch
 
-# Tools
-lazydocker
-yt-x-git
+# BT
+bluetuith
 
-# Img
+# File manager
+nemo-compare
+nemo-ext-git-git
+nemo-media-columns
+nemo-mediainfo-tab
+nemo-meld-compare
+
+### Tools
+# reiserfsprogs
+android-apktool
+android-sdk-build-tools-zipalign-provide
+battop
+howdoi
+openvpn-otp
+openvpn-update-resolv-conf-git
+shell-color-scripts-git
+stacer-git
+virtualbox-ext-oracle
+virtualbox-ext-oracle-dev
+youtube-dl
+yt-x-git
+zesarux
+
+# Media
 chafa
 
+# Messengers
+slack-desktop
+viber
+
+# For Gnome
+adwaita-dark-darose
+extension-manager
+gnome-books
+
+### Work
+chromedriver
+lazydocker
+# mongodb-bin
+# mongodb-compass
+# mongodb-tools
+# nvm
+# pgadmin4
+# postman-bin
+# robo3t-bin
+# teams-for-linux-bin
+# teamviewer
+# wireshark-git
+# zoomdl

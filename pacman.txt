@@ -22,25 +22,26 @@ parted
 gparted
 partitionmanager
 
-# shells
+# Shells
 fish
 fisher
 zsh
 zsh-completions
 
-# download
+# Download
 wget
 uget
 deluge-gtk
 
-# Image viewers
-imagemagick
-gthumb
-lximage-qt
-qimgv
-feh
-gimp
+# Image viewers / Media
 eog
+feh
+# gimp
+# gthumb
+imagemagick
+lximage-qt
+mpv
+qimgv
 
 # Sound
 pamixer
