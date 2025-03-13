@@ -27,4 +27,7 @@ git clone https://github.com/s-adi-dev/hyprshot-gui.git ~/Downloads
 cd ~/Downloads/hyprshot-gui
 ./install.sh
 
+# Install Dracula Icons - https://github.com/m4thewz/dracula-icons
+git clone https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
+
 

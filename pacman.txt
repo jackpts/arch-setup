@@ -113,8 +113,10 @@ qt6-svg
 cuda
 cudnn
 
-# themes
+### Themes
 arc-gtk-theme
+# Tokyonight GTK Theme:
+gtk-engine-murrine
 
 # network
 networkmanager
@@ -122,3 +124,7 @@ networkmanager-dmenu
 
 # AI
 ollama
+
+# Tools
+virtualbox
+virtualbox-host-dkms
