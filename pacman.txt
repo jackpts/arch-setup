@@ -1,13 +1,21 @@
 # Main
-git
 curl
+dconf
+dconf-editor
+git
+gnome-shell
+gnome-system-monitor
+gnome-tweaks
+gnupg
 inxi
 jq
-gnome-tweaks
-gnome-system-monitor
-zoxide
+nodejs
+npm
 pass
-gnupg
+plymouth
+python-pip
+xclip
+zoxide
 
 
 # Terminals & fetchers
@@ -128,3 +136,6 @@ ollama
 # Tools
 virtualbox
 virtualbox-host-dkms
+
+# Others
+cowfortune

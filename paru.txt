@@ -22,6 +22,7 @@ gpustat-git
 ttf-cascadia-code-nerd
 ttf-hack-nerd
 ttf-maple-beta
+# ttf-nerd-fonts-symbols
 
 # Hyprland
 arch-update

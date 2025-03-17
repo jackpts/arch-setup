@@ -16,6 +16,9 @@ makepkg -si
 ./pkg_install.sh pacman.txt pacman
 ./pkg_install.sh paru.txt paru
 
+# LazyVim install from scratch
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
+
 # Install dotfiles packages
 sudo pacman -S stow
 git clone --depth 1 https://github.com/jackpts/dotfiles.git ~/dotfiles
@@ -30,4 +33,9 @@ cd ~/Downloads/hyprshot-gui
 # Install Dracula Icons - https://github.com/m4thewz/dracula-icons
 git clone https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
 
-
+# Install gnome extensions dump
+if command -v gnome-shell &>/dev/null && command -v dconf &>/dev/null; then
+    dconf load /org/gnome/shell/extensions/ <./assets/ext-dump.txt
+else
+    echo "GNOME OR dconf isn't installed!"
+fi
