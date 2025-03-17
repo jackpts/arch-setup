@@ -26,12 +26,12 @@ cd ~/dotfiles
 stow .
 
 # Install Hyprshot UI
-git clone https://github.com/s-adi-dev/hyprshot-gui.git ~/Downloads
+git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git ~/Downloads
 cd ~/Downloads/hyprshot-gui
 ./install.sh
 
 # Install Dracula Icons - https://github.com/m4thewz/dracula-icons
-git clone https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
+git clone --depth 1 https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
 
 # Install gnome extensions dump
 if command -v gnome-shell &>/dev/null && command -v dconf &>/dev/null; then
