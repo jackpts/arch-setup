@@ -6,12 +6,7 @@ clipman
 cpulimit
 qxkb-qt5
 
-# VC
-nvidia
-nvidia-utils
-nvidia-settings
-nvidia-dkms
-
+### VC
 # libva
 # libva-nvidia-driver-git
 gpu-info
@@ -50,7 +45,6 @@ xclip
 
 # Browsers
 #brave-bin
-ddgr
 google-chrome
 opera
 opera-adblock-complete
@@ -71,7 +65,6 @@ speech-dispatcher
 bunnyfetch
 capyfetch
 catnap-git
-ghostty
 onefetch
 rxfetch
 

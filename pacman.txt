@@ -1,7 +1,12 @@
 # Main
+7zip
+bat
+bat-extras
 curl
 dconf
 dconf-editor
+eza
+fd
 git
 gnome-shell
 gnome-system-monitor
@@ -9,18 +14,23 @@ gnome-tweaks
 gnupg
 inxi
 jq
-nodejs
-npm
 pass
 plymouth
 python-pip
 xclip
 zoxide
 
+### VC
+nvidia
+nvidia-container-toolkit
+nvidia-utils
+nvidia-settings
+# nvidia-dkms
 
 # Terminals & fetchers
 alacritty
 fastfetch
+ghostty
 kitty
 neofetch
 tmux
@@ -28,11 +38,13 @@ tmux
 # Disks
 parted
 gparted
+ntfs-3g
 partitionmanager
 
-# Shells
+### Shells
 fish
 fisher
+# nushell
 zsh
 zsh-completions
 
@@ -51,7 +63,9 @@ lximage-qt
 mpv
 qimgv
 
-# Sound
+# Sound / Media
+audacity
+ffmpeg
 pamixer
 pavucontrol
 pipewire
@@ -60,6 +74,7 @@ pipewire-audio
 pipewire-alsa
 pipewire-pulse
 playerctl
+mpc
 mpd
 ncmpcpp
 
@@ -80,17 +95,22 @@ ttf-font-awesome
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 
-# editors
-vim
-neovim
-nano
-micro
+# Editors
 geany
+geany-plugins
+micro
+nano
+neovim
+vim
+
 
 # Hyprland
 copyq
+cmatrix
+fabric
 feh
 figlet
+grim
 gum
 hypridle
 hyprland
@@ -122,20 +142,75 @@ cuda
 cudnn
 
 ### Themes
+arc-icon-theme
 arc-gtk-theme
 # Tokyonight GTK Theme:
 gtk-engine-murrine
 
-# network
+# Network
 networkmanager
-networkmanager-dmenu
+network-manager-applet
+networkmanager-dmenu-git
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+nm-connection-editor
+nmap
+
+# File Manager
+nemo
+nemo-fileroller
+nemo-preview
+nemo-seahorse
+nemo-qml-plugin-configuration
+nemo-qml-plugin-notifications
+net-tools
 
 # AI
 ollama
 
 # Tools
+bleachbit
+brightnessctl
+btop
+htop
+ddgr
+deluge-gtk
+discord
+dmenu
+dmidecode
+duf
+dust
+filezilla
+kdenlive
+keepassxc
+meld
+ncdu
+nwg-dock
 virtualbox
 virtualbox-host-dkms
 
+### Work
+docker
+docker-buildx
+docker-compose
+# gitg
+hub
+github-cli
+# john
+lazygit
+# mariadb
+nodejs
+npm
+
 # Others
+asciiquarium
 cowfortune
+android-tools
+android-file-transfer
+betterlockscreen
+kdeconnect
+kdiff3
+kruler
+krusader
+lshw
