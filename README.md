@@ -7,3 +7,4 @@
 - apply SDDM theme
 - apply Plymouth theme
 - apply GRUB theme
+- style Nemo (nemo.css?)
