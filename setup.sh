@@ -39,3 +39,8 @@ if command -v gnome-shell &>/dev/null && command -v dconf &>/dev/null; then
 else
     echo "GNOME OR dconf isn't installed!"
 fi
+
+# Install Arc Darkest theme
+7z x ./assets/themes/arc-darkest.7z -o/home/$USER/.themes
+
+
