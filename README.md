@@ -3,5 +3,4 @@
 
 ### TODO:
 - apply SDDM theme
-- apply Plymouth theme
 - apply GRUB theme
