@@ -1,9 +1,10 @@
-# Main / System
-chaotic-keyring
-chaotic-mirrorlist
-pacseek
+### Main / System
+# chaotic-keyring
+# chaotic-mirrorlist
 clipman
 cpulimit
+jmtpfs
+pacseek
 qxkb-qt5
 
 ### VC
