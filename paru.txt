@@ -57,9 +57,10 @@ gpu-screen-recorder
 wf-recorder
 yt-x-git
 
-# AI
+### AI
 open-webui
 speech-dispatcher
+# msty-bin
 
 # Terminals & fetchers
 bunnyfetch
