@@ -60,14 +60,12 @@ yt-x-git
 
 ### AI
 open-webui
-speech-dispatcher
 # msty-bin
 
 # Terminals & fetchers
 bunnyfetch
 capyfetch
 catnap-git
-onefetch
 rxfetch
 
 # BT

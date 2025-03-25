@@ -14,11 +14,18 @@ gnome-tweaks
 gnupg
 inxi
 jq
+libreoffice-fresh
+obsidian
 pass
 plymouth
 python-pip
+rsync
+starship
+ufw
 xclip
 zoxide
+xdotool
+ydotool
 
 ### VC
 nvidia
@@ -26,6 +33,7 @@ nvidia-container-toolkit
 nvidia-utils
 nvidia-settings
 # nvidia-dkms
+vulkan-radeon
 
 # Terminals & fetchers
 alacritty
@@ -33,6 +41,7 @@ fastfetch
 ghostty
 kitty
 neofetch
+onefetch
 tmux
 
 # Disks
@@ -41,7 +50,7 @@ gparted
 ntfs-3g
 partitionmanager
 
-### Shells
+### Shell
 fish
 fisher
 # nushell
@@ -49,9 +58,9 @@ zsh
 zsh-completions
 
 # Download
-wget
-uget
 deluge-gtk
+uget
+wget
 
 # Image viewers / Media
 eog
@@ -62,6 +71,7 @@ imagemagick
 lximage-qt
 mpv
 qimgv
+simplescreenrecorder
 
 # Sound / Media
 audacity
@@ -77,13 +87,15 @@ playerctl
 mpc
 mpd
 ncmpcpp
+vlc
+yt-dlp
 
 # BT
 bluez
 bluez-utils
 blueman
 
-# fonts
+# Fonts
 fontconfig
 noto-fonts
 otf-font-awesome
@@ -92,8 +104,12 @@ ttf-fira-code
 ttf-fira-sans
 ttf-firacode-nerd
 ttf-font-awesome
+ttf-hack
+ttf-hack-nerd
+ttf-iosevka-nerd
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
+ttf-nerd-fonts-symbols
 
 # Editors
 geany
@@ -103,11 +119,10 @@ nano
 neovim
 vim
 
-
 # Hyprland
 copyq
 cmatrix
-fabric
+# fabric
 feh
 figlet
 grim
@@ -117,9 +132,12 @@ hyprland
 hyprlock
 libnotify
 network-manager-applet
+nwg-dock
 obs-studio
 qt5-wayland
 qt6-wayland
+refind
+reflector
 rofi
 swayimg
 swaync
@@ -129,7 +147,12 @@ wl-clipboard
 wofi
 
 # SDDM
-sddm
+plasma-desktop
+plasma-framework5
+plasma-nm
+plasma-thunderbolt
+plasma-wayland-protocols
+sddm-git
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-svg
@@ -156,6 +179,11 @@ networkmanager-openvpn
 networkmanager-pptp
 nm-connection-editor
 nmap
+openconnect
+openssh
+openvpn
+wireless_tools
+wpa_supplicant
 
 # File Manager
 nemo
@@ -165,9 +193,11 @@ nemo-seahorse
 nemo-qml-plugin-configuration
 nemo-qml-plugin-notifications
 net-tools
+ranger
 
 # AI
 ollama
+speech-dispatcher
 
 # Tools
 bleachbit
@@ -214,3 +244,11 @@ kdiff3
 kruler
 krusader
 lshw
+speedtest-cli
+stow
+telegram-desktop
+# testdisk
+# timeshift
+tldr
+veracrypt
+wine-staging
