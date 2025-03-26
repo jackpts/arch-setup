@@ -18,6 +18,7 @@ libreoffice-fresh
 obsidian
 pass
 plymouth
+python
 python-pip
 rsync
 starship
