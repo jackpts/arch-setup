@@ -20,10 +20,11 @@ ttf-hack-nerd
 ttf-maple-beta
 # ttf-nerd-fonts-symbols
 
-# Hyprland
+### Hyprland
 arch-update
 brightnessctl
 checkupdates-with-aur
+# cxxmatrix-git
 grim
 hypridle
 hyprpicker
