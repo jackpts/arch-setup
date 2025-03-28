@@ -135,6 +135,7 @@ libnotify
 network-manager-applet
 nwg-dock
 obs-studio
+power-profiles-daemon
 qt5-wayland
 qt6-wayland
 refind
@@ -146,6 +147,8 @@ swww
 waybar
 wl-clipboard
 wofi
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
 
 # SDDM
 plasma-desktop
