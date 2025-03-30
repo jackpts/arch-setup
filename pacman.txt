@@ -189,6 +189,9 @@ openvpn
 wireless_tools
 wpa_supplicant
 
+# Browser
+lynx
+
 # File Manager
 nemo
 nemo-fileroller
