@@ -42,6 +42,8 @@ fi
 
 # Install Arc Darkest theme
 7z x ./assets/themes/arc-darkest.7z -o/home/$USER/.themes
+gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darkest"
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Plymouth setup
 sudo mkdir -p /usr/share/plymouth/themes/
@@ -52,5 +54,6 @@ sudo cp -f ./assets/themes/plymouth/plymouthd.conf /etc/plymouth/plymouthd.conf
 sudo plymouth-set-default-theme --rebuild-initrd
 sudo mkinitcpio -P
 
-
+# Others
+xdg-mime default mpv.desktop video/mp4
 

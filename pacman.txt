@@ -88,7 +88,7 @@ playerctl
 mpc
 mpd
 ncmpcpp
-vlc
+# vlc
 yt-dlp
 
 # BT
