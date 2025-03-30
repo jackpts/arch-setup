@@ -46,12 +46,12 @@ wlogout
 xclip
 
 # Browsers
-#brave-bin
+# brave-bin
 google-chrome
-opera
-opera-adblock-complete
-opera-ffmpeg-codecs
-opera-proxy-git
+# opera
+# opera-adblock-complete
+# opera-ffmpeg-codecs
+# opera-proxy-git
 zen-browser-bin
 
 # Video
