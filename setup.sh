@@ -2,17 +2,18 @@
 
 sudo pacman -S --needed base-devel git
 
-# yay install
+# yay install, just keep for plan B
 # git clone https://aur.archlinux.org/yay.git ~/Downloads
 # cd ~/Downloads/yay
 # makepkg -si
 
 # paru install
-git clone --depth 1 https://aur.archlinux.org/paru.git ~/Downloads
-cd ~/Downloads/paru
+git clone --depth 1 https://aur.archlinux.org/paru.git $HOME/Downloads
+cd $HOME/Downloads/paru
 makepkg -si
-cd ..
-rm -rf ~/Downloads/paru
+# TODO: uncomment lines below after testing
+# cd ..
+# rm -rf $HOME/Downloads/paru
 
 # Install base packages
 ./pkg_install.sh pacman.txt pacman
@@ -32,11 +33,12 @@ sh $HOME/scripts/sddm_setup_theme.sh
 sudo systemctl enable --now sddm
 
 # Install Hyprshot UI
-git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git ~/Downloads
-cd ~/Downloads/hyprshot-gui
-./install.sh
-cd ..
-rm -rf ~/Downloads/hyprshot-gui
+git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git $HOME/Downloads
+cd $HOME/Downloads/hyprshot-gui
+sudo ./install.sh
+# TODO: uncomment lines below after testing
+# cd ..
+# rm -rf $HOME/Downloads/hyprshot-gui
 
 # Install Dracula Icons - https://github.com/m4thewz/dracula-icons
 git clone --depth 1 https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
@@ -61,8 +63,17 @@ sudo cp -vr {Deadlight,Ironman,Cube,Anonymous} /usr/share/plymouth/themes/
 sudo cp -f ./assets/themes/plymouth/plymouthd.conf /etc/plymouth/plymouthd.conf
 sudo plymouth-set-default-theme --rebuild-initrd
 sudo mkinitcpio -P
-cd ..
-rm -rf ~/Downloads/Plymouth-Themes
+# TODO: uncomment lines below after testing
+# cd ..
+# rm -rf ~/Downloads/Plymouth-Themes
+
+# GRUB theme
+cd $HOME/Downloads/arch-setup/assets/themes/grub/
+7z x ./CyberGRUB-2077.7z
+sudo ./CyberGRUB-2077/install.sh
+# TODO: uncomment lines below after testing
+# cd $HOME/Downloads
+# rm -rf $HOME/Downloads/arch-setup/assets/themes/grub/CyberGRUB-2077
 
 # UFW
 sudo systemctl enable --now ufw.service

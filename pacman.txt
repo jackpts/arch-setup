@@ -16,6 +16,7 @@ inxi
 jq
 libreoffice-fresh
 obsidian
+p7zip
 pass
 plymouth
 python

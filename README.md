@@ -9,6 +9,3 @@
     cd arch-setup
     sudo ./setup.sh
 ```
-
-### TODO:
-- apply GRUB theme
