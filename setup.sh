@@ -8,9 +8,11 @@ sudo pacman -S --needed base-devel git
 # makepkg -si
 
 # paru install
-git clone https://aur.archlinux.org/paru.git ~/Downloads
-cd ~/Downloads/paru e
+git clone --depth 1 https://aur.archlinux.org/paru.git ~/Downloads
+cd ~/Downloads/paru
 makepkg -si
+cd ..
+rm -rf ~/Downloads/paru
 
 # Install base packages
 ./pkg_install.sh pacman.txt pacman
@@ -25,10 +27,16 @@ git clone --depth 1 https://github.com/jackpts/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow .
 
+# SDDM
+sh $HOME/scripts/sddm_setup_theme.sh
+sudo systemctl enable --now sddm
+
 # Install Hyprshot UI
 git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git ~/Downloads
 cd ~/Downloads/hyprshot-gui
 ./install.sh
+cd ..
+rm -rf ~/Downloads/hyprshot-gui
 
 # Install Dracula Icons - https://github.com/m4thewz/dracula-icons
 git clone --depth 1 https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
@@ -53,7 +61,21 @@ sudo cp -vr {Deadlight,Ironman,Cube,Anonymous} /usr/share/plymouth/themes/
 sudo cp -f ./assets/themes/plymouth/plymouthd.conf /etc/plymouth/plymouthd.conf
 sudo plymouth-set-default-theme --rebuild-initrd
 sudo mkinitcpio -P
+cd ..
+rm -rf ~/Downloads/Plymouth-Themes
+
+# UFW
+sudo systemctl enable --now ufw.service
+sudo ufw default deny
+sudo ufw enable
 
 # Others
 xdg-mime default mpv.desktop video/mp4
+xdg-mime default mpv.desktop video/mkv
+xdg-mime default mpv.desktop video/webm
+xdg-mime default mpv.desktop video/x-msvideo
+xdg-mime default mpv.desktop video/quicktime
 
+### Enable services
+# sudo systemctl enable --now bluetooth.service
+# systemctl --user enable --now hypridle.service

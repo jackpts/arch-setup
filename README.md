@@ -11,5 +11,4 @@
 ```
 
 ### TODO:
-- apply SDDM theme
 - apply GRUB theme

@@ -150,7 +150,7 @@ wofi
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
 
-# SDDM
+# SDDM & plasma themes packages for it
 plasma-desktop
 plasma-framework5
 plasma-nm
@@ -226,6 +226,7 @@ ncdu
 nwg-dock
 virtualbox
 virtualbox-host-dkms
+xdg-utils
 
 ### Work
 docker
