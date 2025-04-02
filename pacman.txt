@@ -257,6 +257,7 @@ lshw
 scrcpy
 speedtest-cli
 stow
+syncthing
 telegram-desktop
 # testdisk
 # timeshift
