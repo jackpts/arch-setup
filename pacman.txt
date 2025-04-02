@@ -225,6 +225,7 @@ keepassxc
 meld
 ncdu
 nwg-dock
+steam
 virtualbox
 virtualbox-host-dkms
 xdg-utils
@@ -253,6 +254,7 @@ kdiff3
 kruler
 krusader
 lshw
+scrcpy
 speedtest-cli
 stow
 telegram-desktop
