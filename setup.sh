@@ -13,6 +13,7 @@ paru
 sudo reflector --verbose --latest 20 --sort rate --protocol https --timeout 10 --threads 4 --save /etc/pacman.d/mirrorlist
 
 # Install dotfiles packages
+sudo pacman -S stow
 cd $HOME
 git clone --depth 1 https://github.com/jackpts/dotfiles.git
 cd $HOME/dotfiles

@@ -2,7 +2,7 @@
 
 # Check if the correct number of arguments is provided
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <pacman|paru>"
     exit 1
 fi
