@@ -8,8 +8,9 @@ fi
 
 package_list_file="$1.txt"
 package_manager="$1"
-echo "pkg manager: $1"
-echo "pkg list file: $1.txt"
+echo "pkg manager used: $1"
+echo "pkg list file used: $1.txt"
+echo "---------------------------"
 
 # Check if the file exists
 if [ ! -f "$package_list_file" ]; then

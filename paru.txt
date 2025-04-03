@@ -121,3 +121,6 @@ lazydocker
 # teamviewer
 # wireshark-git
 # zoomdl
+
+# Others
+wine-staging-git

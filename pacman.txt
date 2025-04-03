@@ -262,4 +262,3 @@ telegram-desktop
 # timeshift
 tldr
 veracrypt
-wine-staging
