@@ -10,7 +10,7 @@ rm -rf $HOME/Downloads/paru
 paru
 
 # Mirrors update
-sudo reflector --verbose --latest 20 --sort rate --protocol https --timeout 10 --threads 4 --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --latest 20 --sort rate --protocol https --threads 4 --save /etc/pacman.d/mirrorlist
 
 # Install dotfiles packages
 sudo pacman -S stow
