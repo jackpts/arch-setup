@@ -26,7 +26,19 @@ sudo ./pkg_install.sh pacman
 
 # Change default shell to Fish
 echo "Setup fish/fisher/tide..."
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+if ! command -v fish &> /dev/null
+then
+    echo "Fish shell is not installed!"
+    # exit 1
+fi
+
+fish_prompt="$HOME/.config/fish/functions/fish_prompt.fish"
+if [ -f "$fish_prompt" ]; then
+  mv "$fish_prompt" "$fish_prompt.bak"
+  echo "File fish_prompt found & renamed to: $fish_prompt.bak"
+fi
+
+fish -c "curl -sL https://git.io/fisher | source"
 fisher --version
 fisher install IlanCosman/tide@v5
 chsh -s /usr/bin/fish
