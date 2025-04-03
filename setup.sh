@@ -1,25 +1,30 @@
 #!/bin/bash
 
 # paru install
-git clone --depth 1 https://aur.archlinux.org/paru.git $HOME/Downloads
-cd $HOME/Downloads/paru
+cd $HOME/Downloads
+git clone --depth 1 https://aur.archlinux.org/paru.git 
+cd paru
 makepkg -si
-# TODO: uncomment lines below after testing
-# cd ..
-# rm -rf $HOME/Downloads/paru
+cd ..
+rm -rf $HOME/Downloads/paru
+paru
+
+# Mirrors update
+sudo reflector --verbose --latest 20 --sort rate --protocol https --timeout 10 --threads 4 --save /etc/pacman.d/mirrorlist
+
+# Install dotfiles packages
+cd $HOME
+git clone --depth 1 https://github.com/jackpts/dotfiles.git
+cd $HOME/dotfiles
+stow .
 
 # Install base packages
-./pkg_install.sh pacman.txt pacman
-./pkg_install.sh paru.txt paru
+cd $HOME/Downloads/arch-setup/
+sudo ./pkg_install.sh pacman
+sudo ./pkg_install.sh paru
 
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
-
-# Install dotfiles packages
-sudo pacman -S stow
-git clone --depth 1 https://github.com/jackpts/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-stow .
 
 # SDDM
 sh $HOME/scripts/sddm_setup_theme.sh

@@ -1,16 +1,16 @@
 # Main
-7zip
+# 7zip
 bat
 bat-extras
 # curl
-dconf
+# dconf
 dconf-editor
 eza
 fd
-gnome-shell
-gnome-system-monitor
-gnome-tweaks
-gnupg
+# gnome-shell
+# gnome-system-monitor
+# gnome-tweaks
+# gnupg
 inxi
 jq
 libreoffice-fresh
