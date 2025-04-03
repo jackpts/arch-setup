@@ -27,17 +27,19 @@ sudo ./pkg_install.sh pacman
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
 
-# SDDM
-sh $HOME/scripts/sddm_setup_theme.sh
+# SDDM Themify
+# sh $HOME/scripts/sddm_setup_theme.sh
+sudo cp -f ./assets/themes/sddm/sddm.conf /etc/sddm.conf
+7z x ./assets/themes/sddm/andromeda.7z -o/usr/share/sddm/themes
 sudo systemctl enable --now sddm
 
 # Install Hyprshot UI
-git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git $HOME/Downloads
-cd $HOME/Downloads/hyprshot-gui
+cd $HOME/Downloads/
+git clone --depth 1 https://github.com/s-adi-dev/hyprshot-gui.git
+cd hyprshot-gui
 sudo ./install.sh
-# TODO: uncomment lines below after testing
-# cd ..
-# rm -rf $HOME/Downloads/hyprshot-gui
+cd ..
+rm -rf $HOME/Downloads/hyprshot-gui
 
 # Install Dracula Icons - https://github.com/m4thewz/dracula-icons
 git clone --depth 1 https://github.com/m4thewz/dracula-icons ~/.icons/dracula-icons
