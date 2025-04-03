@@ -2,7 +2,7 @@
 7zip
 bat
 bat-extras
-curl
+# curl
 dconf
 dconf-editor
 eza
@@ -62,7 +62,7 @@ zsh-completions
 # Download
 deluge-gtk
 uget
-wget
+# wget
 
 # Image viewers / Media
 eog
@@ -77,7 +77,7 @@ simplescreenrecorder
 
 # Sound / Media
 audacity
-ffmpeg
+# ffmpeg
 pamixer
 pavucontrol
 pipewire
@@ -116,10 +116,10 @@ ttf-nerd-fonts-symbols
 # Editors
 geany
 geany-plugins
-micro
-nano
+# micro
+# nano
 neovim
-vim
+# vim
 
 # Hyprland
 copyq
@@ -185,10 +185,10 @@ networkmanager-pptp
 nm-connection-editor
 nmap
 openconnect
-openssh
+# openssh
 openvpn
-wireless_tools
-wpa_supplicant
+# wireless_tools
+# wpa_supplicant
 
 # Browser
 lynx
@@ -228,7 +228,7 @@ nwg-dock
 steam
 virtualbox
 virtualbox-host-dkms
-xdg-utils
+# xdg-utils
 
 ### Work
 docker
@@ -257,7 +257,7 @@ lshw
 scrcpy
 speedtest-cli
 stow
-syncthing
+# syncthing
 telegram-desktop
 # testdisk
 # timeshift
