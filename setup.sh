@@ -1,12 +1,5 @@
 #!/bin/bash
 
-sudo pacman -S --needed base-devel git
-
-# yay install, just keep for plan B
-# git clone https://aur.archlinux.org/yay.git ~/Downloads
-# cd ~/Downloads/yay
-# makepkg -si
-
 # paru install
 git clone --depth 1 https://aur.archlinux.org/paru.git $HOME/Downloads
 cd $HOME/Downloads/paru

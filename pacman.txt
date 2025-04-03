@@ -7,7 +7,6 @@ dconf
 dconf-editor
 eza
 fd
-git
 gnome-shell
 gnome-system-monitor
 gnome-tweaks
