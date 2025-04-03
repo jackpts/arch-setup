@@ -22,7 +22,7 @@ stow .
 # Install base packages
 cd $HOME/Downloads/arch-setup/
 sudo ./pkg_install.sh pacman
-sudo ./pkg_install.sh paru
+./pkg_install.sh paru
 
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
