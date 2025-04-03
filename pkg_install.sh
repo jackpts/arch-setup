@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Check if the correct number of arguments is provided
-
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <pacman|paru>"
     exit 1
 fi
 
 package_list_file="$1.txt"
-package_manager="$2.txt"
+package_manager="$1"
+echo "pkg manager: $1"
+echo "pkg list file: $1.txt"
 
 # Check if the file exists
 if [ ! -f "$package_list_file" ]; then
