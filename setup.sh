@@ -24,6 +24,13 @@ cd $HOME/Downloads/arch-setup/
 sudo ./pkg_install.sh pacman
 ./pkg_install.sh paru
 
+# Change default shell to Fish
+echo "Setup fish/fisher/tide..."
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher --version
+fisher install IlanCosman/tide@v5
+chsh -s /usr/bin/fish
+
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
 

@@ -53,7 +53,6 @@ partitionmanager
 
 ### Shell
 fish
-fisher
 # nushell
 zsh
 zsh-completions
@@ -219,6 +218,7 @@ dmidecode
 duf
 dust
 filezilla
+fzf
 kdenlive
 keepassxc
 meld
