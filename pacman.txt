@@ -155,7 +155,8 @@ plasma-framework5
 plasma-nm
 plasma-thunderbolt
 plasma-wayland-protocols
-sddm-git
+sddm
+sddm-kcm
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-svg

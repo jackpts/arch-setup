@@ -52,9 +52,10 @@ tmux source $HOME/.tmux.conf
 
 # SDDM Themify
 # sh $HOME/scripts/sddm_setup_theme.sh
+cd $HOME/Downloads/arch-setup/
 sudo cp -f ./assets/themes/sddm/sddm.conf /etc/sddm.conf
-7z x ./assets/themes/sddm/andromeda.7z -o/usr/share/sddm/themes
-sudo systemctl enable --now sddm
+sudo 7z x ./assets/themes/sddm/andromeda.7z -o/usr/share/sddm/themes
+sudo systemctl disable gdm && sudo systemctl enable sddm
 
 # Install Hyprshot UI
 cd $HOME/Downloads/
