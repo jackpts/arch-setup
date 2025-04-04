@@ -37,10 +37,10 @@ if [ -f "$fish_prompt" ]; then
   mv "$fish_prompt" "$fish_prompt.bak"
   echo "File fish_prompt found & renamed to: $fish_prompt.bak"
 fi
-
-fish -c "curl -sL https://git.io/fisher | source"
-fisher --version
-fisher install IlanCosman/tide@v5
+# TODO: It's difficult to install Fisher inside Fish, probably it's need to move to Starship
+# fish -c "curl -sL https://git.io/fisher | source"
+# fisher --version
+# fisher install IlanCosman/tide@v5
 chsh -s /usr/bin/fish
 
 # LazyVim install from scratch
