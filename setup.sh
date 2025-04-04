@@ -43,6 +43,10 @@ fi
 # fisher install IlanCosman/tide@v5
 chsh -s /usr/bin/fish
 
+# TMUX plugins installation
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+tmux source $HOME/.tmux.conf
+
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
 
