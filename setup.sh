@@ -43,9 +43,20 @@ fi
 # fisher install IlanCosman/tide@v5
 chsh -s /usr/bin/fish
 
+# Starship installation
+cd $HOME/Downloads/
+curl -sS https://starship.rs/install.sh | sh
+starship init fish | source
+echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
+echo 'eval "$(starship init zsh)"' >> $HOME/.zshrc
+# echo 'starship init fish | source' >> $HOME/.config/fish/config.fish
+
 # TMUX plugins installation
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
+tmux new -d -s temp_session
+tmux run-shell $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
+tmux kill-session -t temp_session
 
 # LazyVim install from scratch
 # git clone https://github.com/LazyVim/starter ~/.config/nvim
