@@ -115,6 +115,9 @@ sudo ./CyberGRUB-2077/install.sh
 sudo systemctl enable --now ufw.service
 sudo ufw default deny
 sudo ufw enable
+# Battle.net open ports:
+sudo ufw allow out proto tcp to any port 1119,1120,3724,6113,6114
+sudo ufw allow out proto udp to any port 1119,1120,3724,6113,6114
 
 # Others
 xdg-mime default mpv.desktop video/mp4
