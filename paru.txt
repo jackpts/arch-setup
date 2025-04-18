@@ -88,7 +88,6 @@ howdoi
 openvpn-otp
 openvpn-update-resolv-conf-git
 shell-color-scripts-git
-stacer-git
 # virtualbox-ext-oracle
 # virtualbox-ext-oracle-dev
 youtube-dl
@@ -122,5 +121,6 @@ lazydocker
 # wireshark-git
 # zoomdl
 
-# Others
-wine-staging-git
+### Others/Games
+dxvk-bin 
+
