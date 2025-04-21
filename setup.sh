@@ -17,7 +17,8 @@ sudo pacman -S stow
 cd $HOME
 git clone --depth 1 https://github.com/jackpts/dotfiles.git
 cd $HOME/dotfiles
-stow .
+stow . --adopt
+git stash
 
 # Install base packages
 cd $HOME/Downloads/arch-setup/
