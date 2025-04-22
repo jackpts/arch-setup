@@ -22,7 +22,7 @@ function install_locales() {
 
 function partition_disk() {
     # Create partitions (adjust sizes as needed)
-    parted /dev/sda mklabel efi
+    parted /dev/sda mklabel msdos
     parted /dev/sda mkpart primary fat32 0% 512MiB
     parted /dev/sda mkpart primary ext4 512MiB 100%
 
