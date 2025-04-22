@@ -23,15 +23,14 @@ function install_locales() {
 function partition_disk() {
   # Create partitions (adjust sizes as needed)
   parted /dev/sda mklabel msdos
-  # parted /dev/sda create 1 esp boot
-  parted /dev/sda create 1 esp
-  # parted /dev/sda create 2
-  # parted /dev/sda set 1 boot on
-  # parted /dev/sda set 2 flags partition
+  parted /dev/sda mkpart primary fat32 0% 512MiB
+  parted /dev/sda mkpart primary ext4 512MiB 100%
 
   # Format partitions
   mkfs.vfat -F 32 /dev/sda1
   mkfs.ext4 /dev/sda2
+
+  parted /dev/sda print
 }
 
 function install_bootloader() {
