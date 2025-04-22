@@ -7,7 +7,7 @@
 
 ```sh
     pacman-key --init
-    sudo pacman -S git
+    sudo pacman -Sy git
     cd $HOME/Downloads
     git clone --depth 1 https://github.com/jackpts/arch-setup.git
     sh ./arch-setup/setup.sh
