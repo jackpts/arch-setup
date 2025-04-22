@@ -53,7 +53,7 @@ function install_bootloader() {
     arch-chroot /mnt <<EOF
     grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
     exit
-    EOF
+EOF
     # update-grub
     # grub-mkconfig -o /mnt/boot/grub/grub.cfg
     # sudo pacman -S refind gdisk
