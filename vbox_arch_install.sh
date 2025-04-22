@@ -33,17 +33,17 @@ function partition_disk() {
     parted /dev/sda print
 
     # Mount partitions
-    sudo mount /dev/sda2 /mnt
     sudo mkdir -p /mnt/boot/efi
+    sudo mount /dev/sda2 /mnt
     sudo mount /dev/sda1 /mnt/boot/efi
+
+    # Install base system
+    pacstrap /mnt base linux linux-firmware grub efibootmgr
 
     # Mount virtual systems for chroot mode
     mount --bind /dev /mnt/dev
     mount --bind /proc /mnt/proc
     mount --bind /sys /mnt/sys
-
-    # Install base system
-    pacstrap /mnt base linux linux-firmware grub efibootmgr
 
     # Generate fstab
     genfstab -U /mnt >>/mnt/etc/fstab
