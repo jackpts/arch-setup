@@ -13,7 +13,7 @@ fd
 # gnupg
 inxi
 jq
-libreoffice-fresh
+# libreoffice-fresh
 obsidian
 p7zip
 pass
@@ -37,8 +37,8 @@ nvidia-settings
 vulkan-radeon
 
 # Terminals & fetchers
-alacritty
-fastfetch
+# alacritty
+# fastfetch
 ghostty
 kitty
 neofetch
@@ -164,9 +164,9 @@ qt6-5compat
 qt6-declarative
 qt6-svg
 
-# GPU
-cuda
-cudnn
+### GPU
+# cuda
+# cudnn
 
 ### Themes
 arc-icon-theme
@@ -213,7 +213,7 @@ btop
 htop
 ddgr
 deluge-gtk
-discord
+# discord
 dmenu
 dmidecode
 duf
@@ -231,6 +231,7 @@ virtualbox-host-dkms
 # xdg-utils
 
 ### Work
+dart-sass
 docker
 docker-buildx
 docker-compose

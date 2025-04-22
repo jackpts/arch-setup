@@ -9,8 +9,18 @@ cd ..
 rm -rf $HOME/Downloads/paru
 paru
 
+# Keys update
+sudo pacman-key --refresh-keys
+
+# Cache clear
+sudo pacman -Scc
+
 # Mirrors update
 sudo reflector --verbose --latest 20 --sort rate --protocol https --threads 4 --save /etc/pacman.d/mirrorlist
+
+# Sync system time
+sudo systemctl start systemd-timesyncd
+sudo systemctl enable systemd-timesyncd
 
 # Install dotfiles packages
 sudo pacman -S stow
