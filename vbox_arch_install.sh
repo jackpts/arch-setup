@@ -22,7 +22,7 @@ function install_locales() {
 
 function partition_disk() {
     # Create partitions (adjust sizes as needed)
-    parted /dev/sda mklabel msdos
+    parted /dev/sda mklabel gpt
     parted /dev/sda mkpart primary fat32 0% 512MiB
     parted /dev/sda mkpart primary ext4 512MiB 100%
 
@@ -32,18 +32,23 @@ function partition_disk() {
 
     parted /dev/sda print
 
-    sudo mkdir -p /mnt/boot/efi
+    # Mount partitions
     sudo mount /dev/sda2 /mnt
+    sudo mkdir -p /mnt/boot/efi
     sudo mount /dev/sda1 /mnt/boot/efi
 
-    pacstrap /mnt base linux linux-firmware
+    # Install base system
+    pacstrap /mnt base linux linux-firmware grub efibootmgr
+
+    # Generate fstab
     genfstab -U /mnt >>/mnt/etc/fstab
 }
 
 function install_bootloader() {
-    sudo grub-install --target=x86_64-efi --efi-directory=/mnt/boot/efi --bootloader-id=GRUB --recheck
+    arch-chroot /mnt
+    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
     update-grub
-    sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg
+    grub-mkconfig -o /mnt/boot/grub/grub.cfg
     # sudo pacman -S refind gdisk
     # refind-install
 }
