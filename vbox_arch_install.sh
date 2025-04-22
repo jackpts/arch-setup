@@ -18,7 +18,6 @@ TIMEZONE="UTC+03"
 
 function install_locales() {
   locale-gen $LOCALE
-  update-locale LANG=$LOCALE
 }
 
 function partition_disk() {
@@ -66,6 +65,7 @@ function set_timezone() {
 echo "--- Starting Arch Linux Installation Script ---"
 
 # 1. Install Locales
+pacman -S --noconfirm glibc # Install glibc before locales
 install_locales
 
 # 2. Partitioning Disk
