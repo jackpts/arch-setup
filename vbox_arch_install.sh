@@ -5,7 +5,7 @@
 set -e # Exit immediately if a command exits with a non-zero status
 
 # --- Configuration ---
-LOCALE="en_US UTF_8 ru_RU"
+LOCALE="en_US.UTF_8 UTF-8 ru_RU.UTF-8 UTF-8 ru_RU.KOI8-R KOI8-R"
 HOSTNAME="arch"
 ROOT_PASSWORD="123"
 USERNAME="j"
@@ -17,37 +17,47 @@ TIMEZONE="UTC+03"
 # --- Functions ---
 
 function install_locales() {
-  locale-gen $LOCALE
+    locale-gen $LOCALE
 }
 
 function partition_disk() {
-  # Create partitions (adjust sizes as needed)
-  parted /dev/sda mklabel msdos
-  parted /dev/sda mkpart primary fat32 0% 512MiB
-  parted /dev/sda mkpart primary ext4 512MiB 100%
+    # Create partitions (adjust sizes as needed)
+    parted /dev/sda mklabel efi
+    parted /dev/sda mkpart primary fat32 0% 512MiB
+    parted /dev/sda mkpart primary ext4 512MiB 100%
 
-  # Format partitions
-  mkfs.vfat -F 32 /dev/sda1
-  mkfs.ext4 /dev/sda2
+    # Format partitions
+    mkfs.vfat -F 32 /dev/sda1
+    mkfs.ext4 /dev/sda2
 
-  parted /dev/sda print
+    parted /dev/sda print
+
+    sudo mkdir -p /mnt/boot/efi
+    sudo mount /dev/sda2 /mnt
+    sudo mount /dev/sda1 /mnt/boot/efi
+
+    pacstrap /mnt base linux linux-firmware
+    genfstab -U /mnt >>/mnt/etc/fstab
 }
 
 function install_bootloader() {
-  grub-install --target=i386-pc /dev/sda
-  update-grub
+    sudo grub-install --target=x86_64-efi --efi-directory=/mnt/boot/efi --bootloader-id=GRUB --recheck
+    update-grub
+    sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg
+    # sudo pacman -S refind gdisk
+    # refind-install
 }
 
 function create_user() {
-  useradd -m $USERNAME -G wheel,audio,video,power -s /bin/bash $USERNAME
-  echo "$USERNAME:$USER_PASSWORD" | chpasswd
-  sudo chmod 660 /etc/sudoers
-  # Add user to sudo group (if not already)
-  gpasswd -a $USERNAME wheel
+    useradd -m $USERNAME -G wheel,audio,video,power -s /bin/bash $USERNAME
+    echo "$USERNAME:$USER_PASSWORD" | chpasswd
+    sudo chmod 660 /etc/sudoers
+    # Add user to sudo group (if not already)
+    gpasswd -a $USERNAME wheel
 }
 
 function install_packages() {
-  pacman -S --noconfirm gnome gnome-extra gdm3 xorg-server xorg-xinit firefox network-manager pipewire pipewire-alsa sddm lightdm git kitty nano
+    pacman -S --noconfirm gnome gnome-extra gdm3 xorg-server xorg-xinit firefox network-manager pipewire pipewire-alsa sddm lightdm git kitty nano
 }
 
 function install_paru() {
@@ -55,9 +65,8 @@ function install_paru() {
     pacman -S --noconfirm paru
 }
 
-
 function set_timezone() {
-  timedatectl set-timezone "$TIMEZONE"
+    timedatectl set-timezone "$TIMEZONE"
 }
 
 # --- Main Execution ---
