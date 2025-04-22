@@ -37,6 +37,11 @@ function partition_disk() {
     sudo mkdir -p /mnt/boot/efi
     sudo mount /dev/sda1 /mnt/boot/efi
 
+    # Mount virtual systems for chroot mode
+    mount --bind /dev /mnt/dev
+    mount --bind /proc /mnt/proc
+    mount --bind /sys /mnt/sys
+
     # Install base system
     pacstrap /mnt base linux linux-firmware grub efibootmgr
 
@@ -45,12 +50,15 @@ function partition_disk() {
 }
 
 function install_bootloader() {
-    arch-chroot /mnt
+    arch-chroot /mnt <<EOF
     grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
-    update-grub
-    grub-mkconfig -o /mnt/boot/grub/grub.cfg
+    exit
+    EOF
+    # update-grub
+    # grub-mkconfig -o /mnt/boot/grub/grub.cfg
     # sudo pacman -S refind gdisk
     # refind-install
+    umount -R /mnt
 }
 
 function create_user() {
@@ -63,11 +71,6 @@ function create_user() {
 
 function install_packages() {
     pacman -S --noconfirm gnome gnome-extra gdm3 xorg-server xorg-xinit firefox network-manager pipewire pipewire-alsa sddm lightdm git kitty nano
-}
-
-function install_paru() {
-    # Install Paru using pacman
-    pacman -S --noconfirm paru
 }
 
 function set_timezone() {
@@ -94,26 +97,23 @@ create_user
 # 5. Install Packages - GNOME Desktop Environment
 install_packages
 
-# 6. Install Paru
-install_paru
-
-# 7. Set Timezone
+# 6. Set Timezone
 set_timezone
 
-# 8. Configure NetworkManager (Requires GNOME) - This is a basic setup, may need adjustments
+# 7. Configure NetworkManager (Requires GNOME) - This is a basic setup, may need adjustments
 systemctl enable NetworkManager
 
-# 9. Configure SDDM Greeter
+# 8. Configure SDDM Greeter
 echo "Setting up SDDM greeter..."
 sed -i 's/^GRUB_CMDLINE_LINUX="quiet splash"/GRUB_CMDLINE_LINUX="quiet splash greeter=sdm"' /etc/default/grub
 
-# 10. Set Root Password
+# 9. Set Root Password
 echo "$ROOT_PASSWORD" | sudo passwd root
 
-# 11. Set Hostname
+# 10. Set Hostname
 hostnamectl set-hostname $HOSTNAME
 
-# 12.  Inform user to reboot manually
+# 11.  Inform user to reboot manually
 echo "Installation complete! Please reboot your system manually."
 
 echo "--- Installation Complete ---"
