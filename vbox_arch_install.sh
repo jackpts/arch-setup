@@ -23,10 +23,11 @@ function install_locales() {
 function partition_disk() {
   # Create partitions (adjust sizes as needed)
   parted /dev/sda mklabel msdos
-  parted /dev/sda create 1 esp boot
-  parted /dev/sda create 2
-  parted /dev/sda set 1 boot on
-  parted /dev/sda set 2 flags partition
+  # parted /dev/sda create 1 esp boot
+  parted /dev/sda create 1 esp
+  # parted /dev/sda create 2
+  # parted /dev/sda set 1 boot on
+  # parted /dev/sda set 2 flags partition
 
   # Format partitions
   mkfs.vfat -F 32 /dev/sda1
