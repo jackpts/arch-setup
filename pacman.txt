@@ -165,7 +165,7 @@ qt6-declarative
 qt6-svg
 
 ### GPU
-# cuda
+# cuda-toolkit
 # cudnn
 
 ### Themes
