@@ -7,7 +7,7 @@ jmtpfs
 pacseek
 qxkb-qt5
 
-### VC
+### GPU
 # libva
 # libva-nvidia-driver-git
 gpu-info

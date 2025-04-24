@@ -30,11 +30,10 @@ ydotool
 
 ### VC
 nvidia
+# nvidia-dkms
 nvidia-container-toolkit
 nvidia-utils
 nvidia-settings
-# nvidia-dkms
-vulkan-radeon
 
 # Terminals & fetchers
 # alacritty
@@ -75,7 +74,7 @@ simplescreenrecorder
 
 # Sound / Media
 audacity
-# ffmpeg
+ffmpeg
 pamixer
 pavucontrol
 pipewire
