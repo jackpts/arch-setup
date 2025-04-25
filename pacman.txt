@@ -210,6 +210,7 @@ bleachbit
 brightnessctl
 btop
 htop
+iotop
 ddgr
 deluge-gtk
 # discord
