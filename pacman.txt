@@ -130,7 +130,6 @@ hypridle
 hyprland
 hyprlock
 libnotify
-network-manager-applet
 nwg-dock
 obs-studio
 power-profiles-daemon
