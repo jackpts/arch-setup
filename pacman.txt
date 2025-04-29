@@ -128,7 +128,6 @@ grim
 gum
 hypridle
 hyprland
-hyprlock
 libnotify
 nwg-dock
 obs-studio
