@@ -1,4 +1,5 @@
-# Main
+### Main
+archlinux-keyring
 # 7zip
 bat
 bat-extras
@@ -265,6 +266,9 @@ tldr
 veracrypt
 
 # Game
+wine-mono
+wine-gecko
+winetricks
 wine-staging
 lib32-gnutls
 lib32-libldap

@@ -130,6 +130,9 @@ sudo ufw enable
 sudo ufw allow out proto tcp to any port 1119,1120,3724,6113,6114
 sudo ufw allow out proto udp to any port 1119,1120,3724,6113,6114
 
+# Install DX9 for games
+winetricks d3dx9 vcrun2015
+
 # Others
 xdg-mime default mpv.desktop video/mp4
 xdg-mime default mpv.desktop video/mkv
