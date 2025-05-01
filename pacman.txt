@@ -169,6 +169,7 @@ qt6-svg
 ### Themes
 arc-icon-theme
 arc-gtk-theme
+gnome-themes-extra
 # Tokyonight GTK Theme:
 gtk-engine-murrine
 
