@@ -62,6 +62,10 @@ echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
 echo 'eval "$(starship init zsh)"' >> $HOME/.zshrc
 # echo 'starship init fish | source' >> $HOME/.config/fish/config.fish
 
+# PowerLevel10k plugin installation for ZSH
+paru -S --noconfirm zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
 # TMUX plugins installation
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
