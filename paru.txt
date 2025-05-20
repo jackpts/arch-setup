@@ -112,6 +112,7 @@ gnome-books
 
 ### Work
 chromedriver
+glow
 lazydocker
 # mongodb-bin
 # mongodb-compass
