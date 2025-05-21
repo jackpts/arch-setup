@@ -133,6 +133,10 @@ sudo ufw enable
 # Battle.net open ports:
 sudo ufw allow out proto tcp to any port 1119,1120,3724,6113,6114
 sudo ufw allow out proto udp to any port 1119,1120,3724,6113,6114
+# KDE Connect ports
+sudo ufw allow 1714:1764/tcp comment 'KDE Connect TCP'
+sudo ufw allow 1714:1764/udp comment 'KDE Connect UDP'
+sudo ufw allow from any to any port 5353 proto udp comment 'KDE Connect mDNS'
 
 # Install DX9 for games
 winetricks d3dx9 vcrun2015
