@@ -89,6 +89,7 @@ android-apktool
 android-sdk-build-tools-zipalign-provide
 battop
 howdoi
+libinput
 openvpn-otp
 openvpn-update-resolv-conf-git
 shell-color-scripts-git
