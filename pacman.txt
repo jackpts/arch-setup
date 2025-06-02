@@ -255,6 +255,7 @@ kdeconnect
 kdiff3
 kruler
 krusader
+lm-sensors
 lshw
 scrcpy
 speedtest-cli
