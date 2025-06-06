@@ -210,6 +210,7 @@ speech-dispatcher
 bleachbit
 brightnessctl
 btop
+codespell
 htop
 iotop
 ddgr
