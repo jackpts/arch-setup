@@ -68,8 +68,8 @@ feh
 # gimp
 # gthumb
 imagemagick
-lximage-qt
 mpv
+nomacs
 qimgv
 simplescreenrecorder
 
