@@ -151,3 +151,17 @@ xdg-mime default mpv.desktop video/quicktime
 ### Enable services
 # sudo systemctl enable --now bluetooth.service
 # systemctl --user enable --now hypridle.service
+
+
+### Extend FailLock from default 3 tries to 5
+file="/etc/security/faillock.conf"
+
+if [[ -f "$file" ]]; then
+    cp -p "$file" "$file.bak" || { echo "Failed to create a faillock conf backup!"; }
+
+    # Use sed to replace the line "# deny = 3" with "deny = 5"
+    sed -i 's/^#\s*deny\s*=\s*3/deny = 5/' "$file" || { echo "Error updating faillock tries!"; }
+
+    echo "Faillock updated."
+fi
+
