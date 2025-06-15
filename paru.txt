@@ -126,6 +126,7 @@ lazydocker
 # teamviewer
 # wireshark-git
 # zoomdl
+volta
 
 ### Others/Games
 dxvk-bin 
