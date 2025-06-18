@@ -211,6 +211,7 @@ bleachbit
 brightnessctl
 btop
 codespell
+dysk
 htop
 iotop
 ddgr
