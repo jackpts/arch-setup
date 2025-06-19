@@ -2,7 +2,7 @@
 
 # paru install
 cd $HOME/Downloads
-git clone --depth 1 https://aur.archlinux.org/paru.git 
+git clone --depth 1 https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
@@ -37,16 +37,15 @@ sudo ./pkg_install.sh pacman
 
 # Change default shell to Fish
 echo "Setup fish/fisher/tide..."
-if ! command -v fish &> /dev/null
-then
+if ! command -v fish &>/dev/null; then
     echo "Fish shell is not installed!"
     # exit 1
 fi
 
 fish_prompt="$HOME/.config/fish/functions/fish_prompt.fish"
 if [ -f "$fish_prompt" ]; then
-  mv "$fish_prompt" "$fish_prompt.bak"
-  echo "File fish_prompt found & renamed to: $fish_prompt.bak"
+    mv "$fish_prompt" "$fish_prompt.bak"
+    echo "File fish_prompt found & renamed to: $fish_prompt.bak"
 fi
 # TODO: It's difficult to install Fisher inside Fish, probably it's need to move to Starship
 # fish -c "curl -sL https://git.io/fisher | source"
@@ -58,8 +57,8 @@ chsh -s /usr/bin/fish
 cd $HOME/Downloads/
 curl -sS https://starship.rs/install.sh | sh
 starship init fish | source
-echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
-echo 'eval "$(starship init zsh)"' >> $HOME/.zshrc
+echo 'eval "$(starship init bash)"' >>$HOME/.bashrc
+echo 'eval "$(starship init zsh)"' >>$HOME/.zshrc
 # echo 'starship init fish | source' >> $HOME/.config/fish/config.fish
 
 # PowerLevel10k plugin installation for ZSH
@@ -152,7 +151,6 @@ xdg-mime default mpv.desktop video/quicktime
 # sudo systemctl enable --now bluetooth.service
 # systemctl --user enable --now hypridle.service
 
-
 ### Extend FailLock from default 3 tries to 5
 file="/etc/security/faillock.conf"
 
@@ -165,3 +163,8 @@ if [[ -f "$file" ]]; then
     echo "Faillock updated."
 fi
 
+### Install Otter launcher
+git clone https://github.com/kuokuo123/otter-launcher /tmp/otter-launcher
+cd /tmp/otter-launcher
+cargo build --release
+sudo cp /tmp/otter-launcher/target/release/otter-launcher /usr/bin/
