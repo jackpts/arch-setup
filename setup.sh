@@ -168,3 +168,12 @@ git clone https://github.com/kuokuo123/otter-launcher /tmp/otter-launcher
 cd /tmp/otter-launcher
 cargo build --release
 sudo cp /tmp/otter-launcher/target/release/otter-launcher /usr/bin/
+
+
+### Install Sine mod manager for Zen Browser
+cd ~/Downloads
+wget https://github.com/CosmoCreeper/Sine/releases/download/v2.1.1/sine-linux-x64
+chmod +x ./sine-linux-x64
+sudo chown -R $USER /opt/zen-browser-bin/
+./sine-linux-x64
+
