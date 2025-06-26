@@ -175,5 +175,11 @@ cd ~/Downloads
 wget https://github.com/CosmoCreeper/Sine/releases/download/v2.1.1/sine-linux-x64
 chmod +x ./sine-linux-x64
 sudo chown -R $USER /opt/zen-browser-bin/
-./sine-linux-x64
+# ./sine-linux-x64
+
+### Install Windscribe
+cd ~/Downloads/
+wget -O windscribe.zst https://windscribe.com/install/desktop/linux_zst_x64
+sudo pacman -U ./windscribe.zst
+
 
