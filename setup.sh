@@ -182,4 +182,10 @@ cd ~/Downloads/
 wget -O windscribe.zst https://windscribe.com/install/desktop/linux_zst_x64
 sudo pacman -U ./windscribe.zst
 
+### Ghostty add modern cursor shaders
+cd ~/Downloads/
+git clone --depth 1 https://github.com/KroneCorylus/shader-playground.git
+mkdir -p ~/.config/ghostty/shaders
+cp ./shader-playground/shaders/cursor* ~/.config/ghostty/shaders/
+
 
