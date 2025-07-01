@@ -188,4 +188,18 @@ git clone --depth 1 https://github.com/KroneCorylus/shader-playground.git
 mkdir -p ~/.config/ghostty/shaders
 cp ./shader-playground/shaders/cursor* ~/.config/ghostty/shaders/
 
+### Add BT battery % showing by turning On Experimental flag
+BT_CONFIG_FILE="/etc/bluetooth/main.conf"
+BT_SEARCH_STRING="#Experimental = false"
+BT_REPLACE_STRING="Experimental = true"
+if [ -f "$BT_CONFIG_FILE" ] && [ -w "$BT_CONFIG_FILE" ]; then
+    if grep -qF "$BT_SEARCH_STRING" "$CONFIG_FILE"; then
+        sudo sed -i "s|^$BT_SEARCH_STRING|$BT_REPLACE_STRING|g" "$BT_CONFIG_FILE"
+        echo "File updated: $BT_CONFIG_FILE"
+    fi
+fi
+sudo systemctl restart bluetooth
+
+
+
 
