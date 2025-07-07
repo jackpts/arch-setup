@@ -200,6 +200,10 @@ if [ -f "$BT_CONFIG_FILE" ] && [ -w "$BT_CONFIG_FILE" ]; then
 fi
 sudo systemctl restart bluetooth
 
+### Enable Packet static port on firewall
+sudo ufw allow 9300
+sudo ufw allow 9300/udp
+
 
 
 

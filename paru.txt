@@ -92,6 +92,7 @@ howdoi
 libinput
 openvpn-otp
 openvpn-update-resolv-conf-git
+packet
 shell-color-scripts-git
 # virtualbox-ext-oracle
 # virtualbox-ext-oracle-dev
