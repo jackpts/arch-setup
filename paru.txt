@@ -36,7 +36,6 @@ hyprsysteminfo
 hyprwall
 mission-center
 nwg-dock-hyprland
-mpvlock-git
 mpvpaper
 python-pywal
 resources
