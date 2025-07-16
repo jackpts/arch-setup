@@ -84,6 +84,7 @@ nemo-meld-compare
 
 ### Tools
 # reiserfsprogs
+aider-install
 android-apktool
 android-sdk-build-tools-zipalign-provide
 battop

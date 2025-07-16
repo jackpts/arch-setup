@@ -35,6 +35,9 @@ cd $HOME/Downloads/arch-setup/
 sudo ./pkg_install.sh pacman
 ./pkg_install.sh paru
 
+# Restore Nemo settings
+dconf load /org/nemo/ < ~/dotfiles/nemo-dconf-settings
+
 # Change default shell to Fish
 echo "Setup fish/fisher/tide..."
 if ! command -v fish &>/dev/null; then
