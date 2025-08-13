@@ -247,6 +247,7 @@ lazygit
 # mariadb
 nodejs
 npm
+valentina-studio
 
 # Others
 asciiquarium
